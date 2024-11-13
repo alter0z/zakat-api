@@ -1,8 +1,8 @@
 import express, { Application } from 'express'
-// import { routes } from './routes'
 import { logger } from './utils/logger'
 import bodyParser from 'body-parser'
 import cors from 'cors'
+import { routes } from './routes/index.router'
 
 // DB connection
 import './utils/connection'
@@ -23,6 +23,6 @@ app.use((req, res, next) => {
   next()
 })
 
-// routes(app)
+routes(app)
 
 app.listen(port, () => logger.info(`Server is listening on port ${port}`))

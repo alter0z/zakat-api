@@ -5,3 +5,6 @@ const CONFIG = {
 }
 
 export default CONFIG
+
+export const cash: number = 30000
+export const rice: number = 3.5

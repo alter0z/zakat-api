@@ -9,5 +9,5 @@
 /dist
 .env
 # misc
-DS_Store
-.package-lock.json
+.DS_Store
+package-lock.json
