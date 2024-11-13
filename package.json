@@ -1,0 +1,46 @@
+{
+  "name": "zakat-api",
+  "version": "1.0.0",
+  "description": "serve zakat api",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx sc -w",
+    "dev": "npx nodemon",
+    "build": "tsc",
+    "format": "prettier --write .",
+    "prepare": "husky install",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx pretty-quick --staged ng lint ng test",
+      "pre-push": "ng build --aot true"
+    }
+  },
+  "author": "ansori-san",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/uuid": "^10.0.0",
+    "globals": "^15.12.0",
+    "husky": "^9.1.6",
+    "pretty-quick": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "joi": "^17.13.3",
+    "moment": "^2.30.1",
+    "mongoose": "^8.8.1",
+    "nodemon": "^3.1.7",
+    "pino": "^9.5.0",
+    "pino-pretty": "^12.1.0",
+    "uuid": "^11.0.3"
+  }
+}
